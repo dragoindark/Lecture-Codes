@@ -1,0 +1,15 @@
+
+public class arrayLength {
+
+	public static void main(String[] args) {
+		int[] intArray=new int[10];
+		int[] stringArray=new int[15];
+		System.out.println("The size of int array is "+arrayLengthFinder(intArray));
+		System.out.println("The size of int array is "+arrayLengthFinder(stringArray));
+		
+	}
+
+	public static int arrayLengthFinder(int[] arr) {
+		return arr.length;
+	}
+}

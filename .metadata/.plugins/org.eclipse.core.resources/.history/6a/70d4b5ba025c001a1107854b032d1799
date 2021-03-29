@@ -1,0 +1,73 @@
+package lab1;
+
+import java.io.File;
+import java.util.HashMap;
+
+public class Parse implements Parser {
+    private String colorChoice;
+    private boolean caseSensitive;
+    private int shiftAmount;
+	@Override
+	public void changeColor(String colorChoice) {
+		colorChoice.toLowerCase();
+		if(colorChoice.equals("y")) {
+			this.colorChoice="\u001B[33m";
+		}else if (colorChoice.equals("r")) {
+			this.colorChoice="\u001B[31m";
+		}else {
+			System.out.println("Choose between red or yellow");
+		}
+	}
+
+	@Override
+	public void parseFile(File textDoc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void lowerUpper(String caseSensitive) {
+		caseSensitive.toLowerCase();
+		if(caseSensitive.equals("l")) {
+			this.caseSensitive=true;
+		}else if (colorChoice.equals("u")) {
+			this.caseSensitive=false;
+		}else {
+			System.out.println("Choose Upper or Lower");
+		}
+	}
+
+	@Override
+	public String getColor() {
+		return colorChoice;
+	}
+
+	@Override
+	public boolean getCase() {
+		return caseSensitive;
+	}
+
+	@Override
+	public void setShift(int shiftAmount) {
+		this.shiftAmount=shiftAmount;
+		
+	}
+
+	@Override
+	public int getShift() {
+		return shiftAmount;
+	}
+
+	@Override
+	public void createHash(String shiftMe) {
+    String implodedShift=shiftMe.replace(" ","");
+		
+	}
+
+	@Override
+	public HashMap<Integer, String[]> getHash() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,74 @@
+package task11;
+
+public class evenThread implements Runnable {
+
+	private int[][] matrix;
+	private int startIndex, threadPriority, threadDelay;
+	private String threadName;
+	private volatile int rowSum=0;
+	private int totalSum=0;
+	private volatile int currentIndex;
+	
+	Thread myEvenThread;
+	
+
+	public evenThread(int[][] matrix, int startIndex, String threadName, int threadPriority, int threadDelay) {
+		this.matrix = matrix;
+		this.startIndex = startIndex;
+		this.threadDelay = threadDelay;
+		this.threadName = threadName;
+		this.threadPriority = threadPriority;
+		myEvenThread=new Thread(this);
+		myEvenThread.setPriority(threadPriority);
+		myEvenThread.start();
+	}
+	public void getSum() {
+		System.out.println("Thread[" + threadName + "," + startIndex + ",main]. Sum:"+totalSum+".");
+	}
+	
+	public Thread getThread() {
+		return myEvenThread;
+	}
+	
+	public int getPriority() {
+		return threadPriority;
+	}
+	
+	public int getDelay() {
+		return threadDelay;
+	}
+	public int getIndex() {
+		return startIndex;
+	}
+	public String getName() {
+		return threadName;
+	}
+	
+	@Override
+	public void run() {
+		for (int i = startIndex; i < matrix.length; i++) {
+			if (i % 2 == 0) {
+				for (int j = 0; j < matrix[i].length; j++) {
+					rowSum += matrix[i][j];
+				}
+			} else {
+				i++;
+			}
+			currentIndex=i;
+			//System.out.println("Thread[" + threadName + "," + startIndex + ",main]. Row:" + i + ", Sum:" + sum);
+			System.out.println(myEvenThread.toString());
+			try {
+				wait(threadDelay);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+        totalSum+=rowSum;
+	}
+	@Override
+	public String toString() {		
+		 String S = super.toString()+". Row:"+currentIndex+", Sum:"+rowSum+".";				 
+	     return S;
+	}
+
+}

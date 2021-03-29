@@ -1,0 +1,17 @@
+package task8;
+
+import java.util.ArrayList;
+
+public class uncheckedEmployee {
+	private ArrayList E = new ArrayList();
+
+	public ArrayList getList() {
+		return E;
+	}
+
+	public void addList(String Name, String Surname, double Salary) {
+		Employee myEmp = new Employee(Name, Surname, Salary);
+		E.add(myEmp);
+	}
+
+}

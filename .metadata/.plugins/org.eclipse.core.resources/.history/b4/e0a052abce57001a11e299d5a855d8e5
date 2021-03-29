@@ -1,0 +1,15 @@
+package singleton;
+
+public class singleton {
+	private static int instance=0;
+	private static int instanceMax=2;
+	private singleton() {}
+	
+	public static singleton makeSingleton() {
+	   singleton newSingleton = (instance<instanceMax ? new singleton() : null);
+	   return newSingleton;
+	   }
+	}
+	
+
+

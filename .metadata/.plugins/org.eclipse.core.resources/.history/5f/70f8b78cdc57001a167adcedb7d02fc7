@@ -1,0 +1,30 @@
+package singleton;
+
+public class superPart implements Part{
+	
+	private Price newPrice;
+
+	@Override
+	public void setPolicy(Price newPrice) {
+		this.newPrice=newPrice;
+		
+	}
+
+	@Override
+	public void setPrice(double price) {
+		
+		
+	}
+
+	@Override
+	public double getPrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Price getPolicy() {
+		return newPrice;
+	}
+
+}

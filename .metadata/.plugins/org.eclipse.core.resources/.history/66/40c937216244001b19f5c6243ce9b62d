@@ -1,0 +1,10 @@
+
+public class HashMapLab {
+
+	public static void main(String[] args) {
+		String deneme="Burak";
+		System.out.println(deneme[2]);
+
+	}
+
+}

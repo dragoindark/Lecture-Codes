@@ -1,0 +1,10 @@
+package singleton;
+
+public class Harddisk extends superPart{
+	public double diskSize;
+	
+	public setSize(double diskSize) {
+		this.diskSize=diskSize;
+	}
+
+}

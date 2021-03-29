@@ -1,0 +1,51 @@
+package task8;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+
+class Firm {
+	private String Name;
+	private double max = -100;
+
+
+	public Firm(String Name, int MaxLength) {
+		this.Name = Name;
+	}
+
+	public void add(Employee E) {
+		
+	}
+
+	public double getMaxSalary() {
+		for (int i = 0; i < E.length; i++) {
+			if (E[i].getSalary() > max) {
+				max = E[i].getSalary();
+			}
+		}
+		return max;
+	}
+	public Employee [] getEmployees(){
+		return E;
+	}
+
+	public void sortSalariesAsc(Employee [] newEmployee,int startIndex,int endIndex) {
+		//Comparable<Employee> employeeComp=Collections.
+		Arrays.sort(newEmployee,startIndex,endIndex);
+	   }
+	public void sortSalariesDesc(Employee [] newEmployee, int startIndex,int endIndex,salDesc salDescComp) {
+		Comparator<Employee> salDescCompurator= Collections.reverseOrder(salDescComp);
+		Arrays.sort(newEmployee,startIndex,endIndex,salDescCompurator);
+	}
+
+	@Override
+	public String toString() {
+		String S = "Firm: " + Name + ". Amount of employees: " + EmplAmount + ".\n";
+		for (int i = 0; i < EmplAmount; i++) {
+			S += (i + 1) + ". " + E[i] + "\n";
+		}
+		S+="\n"+"Maximal salary:"+getMaxSalary()+"\n";
+		return S;
+	}
+
+}

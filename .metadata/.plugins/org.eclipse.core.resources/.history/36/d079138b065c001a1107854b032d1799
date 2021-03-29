@@ -1,0 +1,14 @@
+package lab1;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+		Parser fileReader=new Parse();
+		String parsedFile=fileReader.parseFile("/root/Downloads");
+		Scanner input=new Scanner(System.in);
+		
+	}
+
+}

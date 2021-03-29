@@ -1,0 +1,17 @@
+package task8;
+
+public class task9 {
+	   public static void main(String args[]) {
+	      Firm VEF = new Firm("VEF", 3);
+	      salDesc salDescComp= new salDesc();
+	      VEF.add(new Employee("Filthy", "Frank", 1100.00)); 
+	      VEF.add(new Employee("Lil", "Peep", 1200.00));
+		  
+	      VEF.add(new Employee("Burak", "Gurel", 1000.00));	  	  	  
+	      System.out.println(VEF);
+	      VEF.sortSalariesAsc(VEF.getEmployees(),0,1);
+	      System.out.println(VEF);
+	      VEF.sortSalariesDesc(VEF.getEmployees(),0, 2, salDescComp);
+	      System.out.println(VEF);
+	   }
+	}

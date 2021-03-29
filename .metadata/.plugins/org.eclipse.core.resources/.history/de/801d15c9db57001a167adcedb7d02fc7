@@ -1,0 +1,5 @@
+package singleton;
+
+interface Part {
+   public abstract void setPolicy(Price newPrice);
+}

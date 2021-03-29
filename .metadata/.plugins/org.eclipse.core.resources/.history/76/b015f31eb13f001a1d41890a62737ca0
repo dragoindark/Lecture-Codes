@@ -1,0 +1,12 @@
+package task8;
+
+import java.util.ArrayList;
+
+public class uncheckedEmployee {
+	private ArrayList E= new ArrayList();
+	
+	public ArrayList getList() {
+		return E;
+	}
+
+}

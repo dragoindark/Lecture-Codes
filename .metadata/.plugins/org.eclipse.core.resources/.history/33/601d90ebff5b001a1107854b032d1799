@@ -1,0 +1,42 @@
+package lab1;
+
+import java.io.File;
+
+public class Parse implements Parser {
+    private String colorChoice;
+    private String caseSensitive;
+	@Override
+	public void changeColor(String colorChoice) {
+		colorChoice.toLowerCase();
+		if(colorChoice.equals("y")) {
+			this.colorChoice="\u001B[33m";
+		}else if (colorChoice.equals("r")) {
+			this.colorChoice="\u001B[31m";
+		}else {
+			System.out.println("Choose between red or yellow");
+		}
+	}
+
+	@Override
+	public void parseFile(File textDoc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String shiftChar(int shiftAmount) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void lowerUpper(String caseSensitive) {
+		caseSensitive.toLowerCase();
+	}
+
+	@Override
+	public String getColor() {
+		return colorChoice;
+	}
+
+}

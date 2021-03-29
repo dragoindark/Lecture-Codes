@@ -1,0 +1,23 @@
+package singleton;
+
+public class PricePolicy implements Price{
+
+	@Override
+	public int tax() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int totalPrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void discount() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

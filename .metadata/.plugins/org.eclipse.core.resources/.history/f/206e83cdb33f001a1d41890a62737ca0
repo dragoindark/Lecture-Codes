@@ -1,0 +1,35 @@
+package task8;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+
+class Firm {
+	private String Name;
+	private double max = -100;
+	private ArrayList E = new ArrayList();
+
+
+	public Firm(String Name, int MaxLength) {
+		this.Name = Name;
+	}
+
+	public void add(ArrayList empList) {
+		for(int i=0;i<empList.size();i++) {
+			this.E.addAll(empList);
+		}
+	}
+
+
+	@Override
+	public String toString() {
+		/*String S = "Firm: " + Name + ". Amount of employees: " + EmplAmount + ".\n";
+		for (int i = 0; i < EmplAmount; i++) {
+			S += (i + 1) + ". " + E[i] + "\n";
+		}
+		S+="\n"+"Maximal salary:"+getMaxSalary()+"\n";
+		return S;*/
+	}
+
+}

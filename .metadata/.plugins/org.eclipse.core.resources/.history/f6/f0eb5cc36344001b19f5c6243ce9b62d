@@ -1,0 +1,30 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class HashMapLab {
+
+	public static void main(String[] args) {
+		String deneme="Burak";
+		HashMap<String,String> studentInfo=new HashMap<String,String>();
+		String facOne="111",facTwo="222",facThree="333",facFour="444",facFive="555",facSix="666",facSeven="777";
+		studentInfo.put(facOne,"Faculty One");
+		studentInfo.put(facOne,"Faculty Twp");
+		studentInfo.put(facOne,"Faculty Three");
+		studentInfo.put(facOne,"Faculty Four");
+		studentInfo.put(facOne,"Faculty Five");
+		studentInfo.put(facOne,"Faculty Six");
+		studentInfo.put(facOne,"Faculty Seven");
+		Scanner input=new Scanner(System.in);
+		
+		System.out.println("Please enter the student ID");
+		String studentId=input.nextLine();
+	}
+	public char[] returnCharArray(String string) {
+		char[] ch=new char[string.length()];
+		for (int i=0;i<ch.length;i++) {
+			ch[i]=string.charAt(i);
+		}
+		return ch;
+	}
+
+}

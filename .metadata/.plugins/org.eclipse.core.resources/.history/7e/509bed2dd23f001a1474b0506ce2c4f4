@@ -1,0 +1,16 @@
+package task11;
+
+public class test {
+	
+	public static void main(String[] args) {
+		int[][] matrix = new int[][]{
+			  { 10, 19, 3, 8, 2},
+			  { 5, 2, 0, 6, 7},
+			  { 4, 5, 17, 22, 13},
+			  { 2, 9, 3, 13, 12},
+			  { 3, 7, 0, 6, 4}
+			};
+		new evenThread(matrix,2,"Even Thread",8,0);
+	}
+
+}

@@ -1,0 +1,11 @@
+package lab1;
+
+import java.io.File;
+
+interface Parser {
+  
+	public abstract void changeColor(String colorChoice);
+	public abstract void parseFile(File textDoc);
+	public abstract void shiftChar(int shiftAmount);
+	public abstract void lowerUpper(String caseSensitive);
+}

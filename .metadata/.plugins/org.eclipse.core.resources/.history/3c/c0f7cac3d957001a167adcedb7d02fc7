@@ -1,0 +1,27 @@
+package singleton;
+
+public class PricePolicy implements Price{
+	private int price;
+
+	@Override
+	public int tax() {
+		
+	}
+
+	@Override
+	public int totalPrice() {
+		return price;
+	}
+
+	@Override
+	public void discount() {
+		
+		
+	}
+	@Override
+	public void setPrice(int price) {
+		this.price=price;
+		
+	}
+
+}

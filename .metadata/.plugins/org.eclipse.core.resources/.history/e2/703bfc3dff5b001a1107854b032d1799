@@ -1,0 +1,31 @@
+package lab1;
+
+import java.io.File;
+
+public class Parse implements Parser {
+
+	@Override
+	public String changeColor(String colorChoice) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void parseFile(File textDoc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String shiftChar(int shiftAmount) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean lowerUpper(String caseSensitive) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

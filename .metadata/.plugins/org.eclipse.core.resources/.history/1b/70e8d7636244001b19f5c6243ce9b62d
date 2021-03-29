@@ -1,0 +1,10 @@
+import java.util.HashMap;
+
+public class HashMapLab {
+
+	public static void main(String[] args) {
+		String deneme="Burak";
+		HashMap<Integer,String> studentInfo=new HashMap<Integer,String>();
+	}
+
+}

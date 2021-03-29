@@ -1,0 +1,19 @@
+package lab1;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+		Parser fileReader=new Parse();
+		String parsedFile=fileReader.parseFile("/root/Downloads");
+		Scanner input=new Scanner(System.in);
+		
+		System.out.println("Upper case or Lower case ? (U or L)");
+		String caseSensitive=input.nextLine();
+		fileReader.lowerUpper(caseSensitive);
+		System.out.println("How many characters to shift ? (1-3)");
+		
+	}
+
+}

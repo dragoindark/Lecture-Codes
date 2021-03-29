@@ -1,0 +1,11 @@
+package singleton;
+
+public class Memory extends superPart{
+	private String memoryType;
+	
+	public void setType(String memoryType) {
+		this.memoryType=memoryType;
+	}
+	
+
+}

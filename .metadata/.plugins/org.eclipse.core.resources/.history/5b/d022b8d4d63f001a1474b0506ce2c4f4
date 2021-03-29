@@ -1,0 +1,52 @@
+package task11;
+
+public class oddThread extends Thread{
+	private int[][] matrix;
+	private int startIndex, threadDelay;
+	private int totalSum = 0;
+
+	Thread myOddThread;
+
+	public oddThread(int[][] matrix, int startIndex, String threadName, int threadPriority, int threadDelay) {
+		super(threadName);
+		this.matrix = matrix;
+		this.startIndex = startIndex;
+		this.threadDelay = threadDelay;
+	}
+
+	public void getSum() {
+		System.out.println(myEvenThread.toString()+" Sum:" + totalSum + ".");
+	}
+
+	public Thread getThread() {
+		return myEvenThread;
+	}
+
+	public int getDelay() {
+		return threadDelay;
+	}
+
+	public int getIndex() {
+		return startIndex;
+	}
+
+	@Override
+	public void run() {
+		for (int i = startIndex; i < matrix.length; i++) {
+			int rowSum = 0;
+			if ((i % 2) == 0) {
+				for (int j = 0; j < matrix[i].length; j++) {
+					rowSum += matrix[i][j];
+				}
+				totalSum += rowSum;
+				System.out.println(myEvenThread.toString()+" Row:" + i + ", Sum:" + rowSum);
+			}
+			try {
+				myEvenThread.sleep(threadDelay);
+			} catch (InterruptedException e) {
+
+				e.printStackTrace();
+			}
+		}
+	}
+}

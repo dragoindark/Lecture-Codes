@@ -1,0 +1,10 @@
+package singleton;
+
+interface Price {
+	
+	public abstract int tax();
+	public abstract int totalPrice();
+	public abstract void discount();
+	public abstract void setPrice();
+
+}
